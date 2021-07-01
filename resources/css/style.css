@@ -1,5 +1,8 @@
 body {
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #header {
@@ -42,14 +45,19 @@ body {
 #apps-image {
     width: 25px;
     height: 25px;
+    border-radius: 30px;
+    opacity: 0.8;
 }
 
 #profile-image {
-    width: 20px;
-    height: 20px;
-    border: 1px solid rgba(0,0,0,0.8);
+    width: 25px;
+    height: 25px;
     border-radius: 30px;
     margin-left: 10px;
+}
+
+#profile-image:hover, #apps-image:hover {
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
 }
 
 .dummy-header-link {
@@ -59,4 +67,89 @@ body {
 
 .dummy-header-link:hover {
     text-decoration: underline;
+}
+
+#main-body {
+    align-self: center;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+}
+
+#google-logo {
+    width: 250px;
+    align-self: center;
+}
+
+#search-form {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-radius: 20px;
+    padding: 5px 15px 5px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+#search-bar {
+    outline: 0;
+    padding: 5px 15px 5px 15px;
+    font-size: 15px;
+    width: 70vw;
+    border: none;
+}
+
+#search-form:focus, #search-form:hover {
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+#search-image {
+    width: 20px;
+    height: 20px;
+    align-self: center;
+    opacity: 0.5;
+}
+
+#mic-image {
+    width: 20px;
+    height: 20px;
+    align-self: center;
+    opacity: 0.5;
+}
+
+#main-body-buttons {
+    margin-top: 30px;
+    width: 225px;
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    padding: 0px 5px 0px 5px;
+    border: 1px solid rgba(0,0,0,0);
+    border-radius: 5px;
+    height: 30px;
+    background-color: rgba(230, 225, 225, 0.178);
+
+}
+
+.button:hover {
+    box-shadow: 0px 2px 3px rgba(0,0,0,0.2);
+}
+
+#google-search {
+}
+
+#im-feeling-lucky {
+}
+
+@media (min-width: 600px) {
+    #search-bar {
+        width: 400px;
+    }
+    #search-form {
+        width: 500px;
+    }
 }
